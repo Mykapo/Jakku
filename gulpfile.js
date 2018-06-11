@@ -16,6 +16,15 @@ var uglify = require('gulp-uglify');
 var isProd = process.env.NODE_ENV === 'production';
 
 /**
+ * TEMPLATES
+ */
+
+function templates() {
+    return gulp.src('views/**/*')
+      .pipe(gulp.dest('public'));
+  }
+
+/**
  * SCSS
  */
 
@@ -79,15 +88,16 @@ function clean() {
   return del(['public']);
 }
 
-gulp.task('build', gulp.series(clean, gulp.parallel(scss, js, images, fonts)));
+gulp.task('build', gulp.series(clean, gulp.parallel(templates, scss, js, images, fonts)));
 
-gulp.task('default', gulp.parallel(scss, js, images, fonts, function(done) {
+gulp.task('default', gulp.parallel(templates, scss, js, images, fonts, function(done) {
   sync.init({
     server: {
       baseDir: './public'
     }
   });
 
+  gulp.watch('views/**/*.html', templates);
   gulp.watch('src/**/*.scss', scss);
   gulp.watch('src/**/*.js', js);
 
