@@ -1,0 +1,43 @@
+.main-menu {
+    width: 20%;
+
+    ul {
+        list-style: none;
+    }
+
+    &__item a {
+        height: 88px;
+        display: flex;
+        align-items: center;
+        .icon {
+            width: 20%;
+            padding: 17px;
+            color: $grey--light;
+        }
+        .infos {
+            width: 80%;
+            h2 {
+                font-family: $font--bold;
+                color: $grey;
+                font-weight: 700;
+                margin-bottom: 4px;
+                font-size: 14px;
+            }
+            span {
+                font-family: $font;
+                color: $grey--ultraLight;
+                font-size: 12px;
+            }
+        } 
+    }
+
+    &__item.active {
+
+        .infos {
+            h2 {
+                color: $purple;
+            }
+        }
+
+    }
+}
