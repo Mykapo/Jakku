@@ -1,9 +1,9 @@
 <header>
   <div class="title">
-    <img src="assets/logo.svg" alt="">
+    <span class="icon-logo"></span>
   </div>
   <div class="search">
-    <img src="assets/search.svg" alt="" class="search-icon">
+    <span class="icon-search"></span>
     <input type="text" placeholder="Rechercher">
   </div>
 </header>
