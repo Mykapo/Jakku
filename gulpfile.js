@@ -20,7 +20,7 @@ var isProd = process.env.NODE_ENV === 'production';
  */
 
 function templates() {
-    return gulp.src('views/**/*')
+    return gulp.src('views/**/*.php')
       .pipe(gulp.dest('public'));
   }
 
@@ -97,7 +97,7 @@ gulp.task('default', gulp.parallel(templates, scss, js, images, fonts, function(
     }
   });
 
-  gulp.watch('views/**/*.html', templates);
+  gulp.watch('views/**/*.php', templates);
   gulp.watch('src/**/*.scss', scss);
   gulp.watch('src/**/*.js', js);
 
