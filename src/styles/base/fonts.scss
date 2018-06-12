@@ -23,33 +23,36 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-icon_arrow:before {
-content: "\e900";
-}
-.icon-icon_clients:before {
-content: "\e901";
-}
-.icon-icon_company:before {
-content: "\e902";
-}
-.icon-icon_dashboard:before {
-content: "\e903";
-}
-.icon-icon_deconnexion:before {
-content: "\e904";
-}
-.icon-icon_facturation:before {
-content: "\e905";
-}
-.icon-icon_parametres:before {
-content: "\e906";
-}
-.icon-icon_projets:before {
-content: "\e907";
-}
-.icon-icon_search:before {
-content: "\e908";
-}
+.icon-logo:before {
+    content: "\e909";
+  }
+  .icon-arrow:before {
+    content: "\e900";
+  }
+  .icon-clients:before {
+    content: "\e901";
+  }
+  .icon-company:before {
+    content: "\e902";
+  }
+  .icon-dashboard:before {
+    content: "\e903";
+  }
+  .icon-deconnexion:before {
+    content: "\e904";
+  }
+  .icon-facturation:before {
+    content: "\e905";
+  }
+  .icon-parametres:before {
+    content: "\e906";
+  }
+  .icon-projets:before {
+    content: "\e907";
+  }
+  .icon-search:before {
+    content: "\e908";
+  }
 
 /* TYPOGRAPHY */
 
