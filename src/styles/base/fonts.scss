@@ -50,3 +50,26 @@ content: "\e907";
 .icon-icon_search:before {
 content: "\e908";
 }
+
+/* TYPOGRAPHY */
+
+@font-face {
+    font-family: 'RobotoRegular';
+    src:  url('../../assets/fonts/Roboto-Regular.otf');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RobotoMedium';
+    src:  url('../../assets/fonts/Roboto-Medium.otf');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RobotoBold';
+    src:  url('../../assets/fonts/Roboto-Bold.otf');
+    font-weight: 700;
+    font-style: normal;
+}
