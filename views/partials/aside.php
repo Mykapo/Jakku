@@ -16,7 +16,7 @@
             </a>
         </li>
         <li class="main-menu__item">
-            <a href="projets.php">
+            <a href="projects.php">
                 <span class="icon icon-icon_list"></span>
                 <div class="infos">
                     <h2>Projets</h2>
@@ -25,7 +25,7 @@
             </a>
         </li>
         <li class="main-menu__item">
-            <a>
+            <a href="invoices.php">
                 <span class="icon icon-icon_facture"></span>
                 <div class="infos">
                     <h2>Facturation</h2>

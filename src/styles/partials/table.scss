@@ -66,6 +66,29 @@ table {
             }
         }
     }
+}
 
+.projects-table,
+.invoices-table {
+    line-height: 1.5;
+
+    .subtable-row {
+        td:first-child {
+            padding-left: 60px;
+        }
+
+        .subtable-title {
+            padding: 15px 0;
+            font-size: 16px;
+            font-weight: 600;
+        }
+    }
+}
+
+.invoices-table {
+    .subtable-title {
+        font-size: 16px;
+        color: $purple;
+    }
 }
 

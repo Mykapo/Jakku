@@ -15,7 +15,7 @@
     <main>
         <?php require('partials/aside.php'); ?>
         <?php //require('partials/empty.php'); ?>
-        <table class="clients-table">
+        <table class="projects-table">
             <thead>
                 <tr>
                     <th></th>
@@ -42,17 +42,17 @@
                 <tr class="subtable-row">
                     <td colspan="3">
                         <div>
-                            <h4>Brief</h4>
+                            <h4 class="subtable-title">Brief</h4>
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat dolores numquam blanditiis facere amet iusto omnis porro magni veritatis accusamus nemo, fuga tempora quibusdam tenetur sint placeat sed perferendis. Sequi.</p>
                         </div>
                         <div>
-                            <h4>Facture</h4>
+                            <h4 class="subtable-title">Facture</h4>
                         </div>
                         <div>
-                            <h4>Notes</h4>
+                            <h4 class="subtable-title">Notes</h4>
                         </div>
                         <div>
-                            <h4>Documents</h4>
+                            <h4 class="subtable-title">Documents</h4>
                         </div>
                     </td>
                 </tr>
