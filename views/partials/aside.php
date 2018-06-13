@@ -7,7 +7,7 @@
 <nav class="main-menu" role="navigation">
     <ul>
         <li class="main-menu__item">
-            <a>
+            <a href="clients.php">
                 <span class="icon icon-icon_user"></span>
                 <div class="infos">
                     <h2>Clients</h2>

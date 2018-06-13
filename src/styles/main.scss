@@ -6,7 +6,12 @@
 
 /* LAYOUT */
 
-@import "partials/header";
+@import "partials/header.scss";
 @import "partials/aside.scss";
+@import "partials/table.scss";
+
+/* COMPONENTS */
+
+@import "components/table-row.scss";
 
 
