@@ -1,12 +1,12 @@
 /* COMMON */
 
-@import "base/fonts";
-@import "base/variables";
-@import  "base/reset";
+@import "base/fonts.scss";
+@import "base/variables.scss";
+@import  "base/reset.scss";
 
 /* LAYOUT */
 
 @import "partials/header";
-
+@import "partials/aside.scss";
 
 
