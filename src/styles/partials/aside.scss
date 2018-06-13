@@ -9,13 +9,14 @@
         height: 88px;
         display: flex;
         align-items: center;
+        padding: 20px;
         .icon {
-            width: 20%;
-            padding: 17px;
+            width: 15%;
+            padding: 5px;
             color: $grey--light;
         }
         .infos {
-            width: 80%;
+            width: 85%;
             h2 {
                 font-family: $font--bold;
                 color: $grey;
@@ -32,10 +33,17 @@
     }
 
     &__item.active {
+        background: $purple--ultraLight;
+        .icon {
+            color: $purple;
+        }
 
         .infos {
             h2 {
                 color: $purple;
+            }
+            span {
+                color: $purple--light;
             }
         }
 

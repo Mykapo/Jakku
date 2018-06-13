@@ -33,7 +33,7 @@
                 </div>
             </a>
         </li>
-        <li class="main-menu__item active">
+        <li class="main-menu__item">
             <a>
                 <span class="icon icon-icon_dashboard"></span>
                 <div class="infos">
