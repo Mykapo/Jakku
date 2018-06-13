@@ -10,10 +10,10 @@
 <body>
     <?php require('partials/header.php'); ?>
 
-    <?php require('partials/aside.php'); ?>
 
     
     <main>
+            <?php require('partials/aside.php'); ?>
     </main>
 </body>
 </html>

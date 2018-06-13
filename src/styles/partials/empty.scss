@@ -1,0 +1,11 @@
+.empty-wrapper {
+    width: 35%;
+    margin: auto;
+    p {
+        color: $grey;
+        text-align: center;
+    }
+    img {
+        max-width: 100%;
+    }
+}

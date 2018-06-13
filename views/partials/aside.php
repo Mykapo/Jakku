@@ -6,7 +6,7 @@
 
 <nav class="main-menu" role="navigation">
     <ul>
-        <li class="main-menu__item">
+        <li class="main-menu__item active">
             <a href="clients.php">
                 <span class="icon icon-icon_user"></span>
                 <div class="infos">
@@ -16,7 +16,7 @@
             </a>
         </li>
         <li class="main-menu__item">
-            <a>
+            <a href="projets.php">
                 <span class="icon icon-icon_list"></span>
                 <div class="infos">
                     <h2>Projets</h2>

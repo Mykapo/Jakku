@@ -10,11 +10,11 @@
 <body>
     <?php require('partials/header.php'); ?>
 
-    <?php require('partials/aside.php'); ?>
 
     
     <main>
-        <table>
+        <?php require('partials/aside.php'); ?>
+        <table class="clients-table">
             <thead>
                 <tr>
                     <th></th>
@@ -27,12 +27,12 @@
             </thead>
             <tbody>
                 <tr class="main-row">
-                    <td><span class="icon icon-icon_arrow"></span></td>
+                    <td class="table-icon"><button><span class="icon icon-icon_arrow"></span></button></td>
                     <td>Ombeline Reninger</td>
                     <td>ombeline@mail.fr</td>
                     <td>0657874656</td>
                     <td>www.ombeline.com</td>
-                    <td><span class="icon icon-icon_edit"></span></td>
+                    <td class="table-icon"><button><span class="icon icon-icon_edit"></span></button></td>
                 </tr>
                 <tr class="subtable-header">
                     <th></th>
@@ -42,13 +42,13 @@
                     <th>Deadline</th>
                     <th>Devis</th>
                 </tr>
-                <tr>
-                    <td><span class="icon icon-icon_arrow"></span></td>
+                <tr class="subtable-row">
+                    <td class="table-icon"><button><span class="icon icon-icon_arrow"></span></button></td>
                     <td>Développement site vitrine</td>
                     <td>en attente</td>
                     <td>2000€</td>
                     <td>12/06/2018</td>
-                    <td><span class="icon icon-icon_pdf"></span></td>
+                    <td class="table-icon"><button><span class="icon icon-icon_pdf"></span></button></td>
                 </tr>
             </tbody>
         </table>
