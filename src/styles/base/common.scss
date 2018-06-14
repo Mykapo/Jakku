@@ -1,0 +1,23 @@
+body {
+    background: #fcfcfc;
+}
+
+main {
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border: 0;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.active {
+    background: $purple--ultraLight;
+    border-left: 4px solid $purple;
+}
