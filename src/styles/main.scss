@@ -5,6 +5,12 @@
 @import  "base/reset.scss";
 @import "base/common.scss";
 
+
+/* COMPONENTS */
+
+@import "components/title.scss";
+
+
 /* LAYOUT */
 
 @import "partials/header.scss";
@@ -12,9 +18,4 @@
 @import "partials/table.scss";
 @import "partials/empty.scss";
 @import "partials/popup";
-
-/* COMPONENTS */
-
-
-
 

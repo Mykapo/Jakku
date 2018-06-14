@@ -9,10 +9,9 @@
 </head>
 <body>
     <?php require('partials/header.php'); ?>
-    <script src="js/main.js"></script> 
     <main>
             <?php require('partials/aside.php'); ?>
     </main>
-    <?php require('partials/popup-devis.php'); ?>
+    <script src="js/main.js"></script> 
 </body>
 </html>
