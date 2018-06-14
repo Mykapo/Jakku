@@ -35,19 +35,19 @@
         </li>
         <li class="main-menu__item">
             <a>
-                <span class="icon icon-icon_dashboard"></span>
-                <div class="infos">
-                    <h2>Tableau de bord</h2>
-                    <span>Accédez à la liste de tous vos clients et à leurs coordonées</span>
-                </div>
-            </a>
-        </li>
-        <li class="main-menu__item">
-            <a>
                 <span class="icon icon-icon_company"></span>
                 <div class="infos">
                     <h2>Votre société</h2>
                     <span>Retrouvez toutes les informations relatives à votre société</span>
+                </div>
+            </a>
+        </li>
+        <li class="main-menu__item soon">
+            <a>
+                <span class="icon icon-icon_dashboard"></span>
+                <div class="infos">
+                    <h2>Tableau de bord <span class="soon-tag">Bientôt !</span></h2>
+                    <span>Accédez à la liste de tous vos clients et à leurs coordonées</span>
                 </div>
             </a>
         </li>
