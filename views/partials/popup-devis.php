@@ -35,10 +35,10 @@
                 </div>
             </div>
             <div class="button-plus">
-                <button class="complete">+</button>
+                <button class="button complete">+</button>
                 <p>Ajouter un intitulé</p>
             </div>
-            <button id="add-finish-devis" type="submit" class="add" disabled>Ajouter</button>
+            <button id="add-finish-devis" type="submit" class="button add" disabled>Ajouter</button>
         </form>
     </section>
 </div>

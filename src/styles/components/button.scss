@@ -1,5 +1,5 @@
 
-button {
+.button {
     background-color: $blue-grey;
     font-family: $font;
     font-size: 18px;
@@ -7,9 +7,11 @@ button {
     padding: 10px;
     border-radius: 50px;
     transition: 0.2s;
+    cursor: default;
 }
 .add {
     margin-top: 30px;
+    margin-bottom: 10px;
     width: 25%;
 }
 .complete {
