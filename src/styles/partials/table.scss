@@ -1,0 +1,94 @@
+
+table {
+    width: 80%;
+    font-size: 12px;
+
+    & > thead tr {
+        border-top: 0;
+    }
+
+    tr {
+        border-top: 1px solid $grey--border;
+    }
+
+    th {
+        text-transform: uppercase;
+        font-family: $font--bold;
+        letter-spacing: 0.2px;
+        color: $grey--ultraLight;
+        text-align: left;
+        padding: 12px 20px 12px 0;
+
+        &:last-child {
+            text-align: center;
+        }
+    }
+
+    td {
+        color: $grey--deep;
+        padding: 15px 20px 15px 0;
+        text-align: left;
+
+        &:last-child {
+            padding-right: 20px;
+        }
+    }
+
+    .main-row {
+        background: #ffff;
+        &.active {
+            background: $purple--ultraLight;
+        }
+    }
+
+    .subtable-row {
+        padding-left: 20px;
+
+        .table-icon:first-child .icon {
+            padding-left: 25px;
+        }
+    }
+
+    .table-icon {
+        text-align: center;
+        padding-right: 0;
+
+        &:first-child {
+            padding-right: 10px;
+        }
+
+        .icon {
+            color: $grey--light;
+            font-size: 1rem;
+            &.icon-icon_arrow {
+                color: $grey--ultraLight;
+                font-size: 10px;
+            }
+        }
+    }
+}
+
+.projects-table,
+.invoices-table {
+    line-height: 1.5;
+
+    .subtable-row {
+        td:first-child {
+            padding-left: 60px;
+        }
+
+        .subtable-title {
+            padding: 15px 0;
+            font-size: 16px;
+            font-weight: 600;
+        }
+    }
+}
+
+.invoices-table {
+    .subtable-title {
+        font-size: 16px;
+        color: $purple;
+    }
+}
+

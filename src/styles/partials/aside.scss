@@ -1,5 +1,8 @@
 .main-menu {
     width: 20%;
+    background: white;
+    border-right: 1px solid $grey--border;
+    height: 100vh;
 
     ul {
         list-style: none;
@@ -9,10 +12,10 @@
         height: 88px;
         display: flex;
         align-items: center;
-        padding: 20px;
+        padding: 17px;
         .icon {
             width: 15%;
-            padding: 5px;
+            margin-right: 7px;
             color: $grey--light;
         }
         .infos {
@@ -32,7 +35,9 @@
         } 
     }
 
-    &__item.active {
+    &__item.active, 
+    &__item a:hover,
+    &__item a:focus {
         background: $purple--ultraLight;
         .icon {
             color: $purple;
