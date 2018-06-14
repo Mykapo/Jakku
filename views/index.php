@@ -9,7 +9,7 @@
 </head>
 <body>
     <?php require('partials/header.php'); ?>
-    <script src="js/main.js"></script> 
+    <script src="js/main.js"></script>
     <main>
             <?php require('partials/aside.php'); ?>
     </main>
