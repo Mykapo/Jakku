@@ -20,7 +20,7 @@
                 <thead>
                     <tr>
                         <th></th>
-                        <th>Client</th>
+                        <th class="row-fixedWidth">Client</th>
                         <th>Mail</th>
                         <th>Téléphone</th>
                         <th>Site web</th>

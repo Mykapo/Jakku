@@ -60,11 +60,17 @@
     }
 }
 
-.main-menu__item a .infos span.soon-tag {
+.main-menu__item a {}
+
+ .infos span.soon-tag {
         color: white;
         background: $grey--light;
         font-size: 10px;
         border-radius: 2px;
         padding: 2px 4px;
         margin-left: 8px;
+        &:hover {
+            background: $grey--light;
+            color: white;
+        }
     }

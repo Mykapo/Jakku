@@ -21,8 +21,8 @@
                 <thead>
                     <tr>
                         <th></th>
-                        <th>Nom du projet</th>
-                        <th>Client</th>
+                        <th class="row-fixedWidth">Nom du projet</th>
+                        <th class="row-fixedWidth">Client</th>
                         <th>Statut</th>
                         <th>Montant</th>
                         <th>Deadline</th>
