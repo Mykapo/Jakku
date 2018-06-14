@@ -1,0 +1,25 @@
+{
+    "name": "mykapo/jakku",
+    "description": "Easy Customer Administrator",
+    "type": "project",
+    "require": {
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^4.1",
+        "phpunit/phpunit": "^7.2"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mykapo",
+            "email": "mykapo@hetic.net"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Mykapo\\Jakku\\" : "app/"
+        },
+        "files" : ["conf.php", "app/Core/Helper/functions.php"]
+    }
+}
