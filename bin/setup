@@ -4,14 +4,17 @@
 require_once __DIR__ . "/../vendor/autoload.php";
 
 echo "As we are creating the database, we will need a root access to your database.\n
-    Please make sure your MySQL server is on, and accessible in your PATH";
+    Please make sure your MySQL server is on, and accessible in your PATH \n";
 
-$user = readline("What is your root user ?");
-$sql = file_get_contents(__DIR__ . "/../ressources/database/jakku.sql");
+$user = readline("What is your root user ?\n");
+$sql = file_get_contents(__APP_ROOT__ . "/ressources/database/jakku.sql");
 
-$sql = preg_replace("jakku_db_name", __DB_NAME__, $sql);
+$sql = preg_replace('&jakku_database_name&', __DB_NAME__, $sql);
+$sql = preg_replace('&jakku_user_name&', __DB_USER__, $sql);
+$sql = preg_replace('&jakku_host&', __DB_HOST__, $sql);
+$sql = preg_replace('&jakku_password&', __DB_PASS__, $sql);
 
 echo "As your password is something personal, we don't want to know about it. \n
-    MySQL will ask it to create database, then we will use the one you must specify in conf.php";
+    MySQL will ask it to create database, then we will use the one you must specify in conf.php \n";
 
 exec(sprintf("mysql -u%s -p -e '%s'", $user, $sql));
