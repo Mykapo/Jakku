@@ -1,0 +1,17 @@
+#!/usr/bin/env php
+<?php
+
+require_once __DIR__ . "/../vendor/autoload.php";
+
+echo "As we are creating the database, we will need a root access to your database.\n
+    Please make sure your MySQL server is on, and accessible in your PATH";
+
+$user = readline("What is your root user ?");
+$sql = file_get_contents(__DIR__ . "/../ressources/database/jakku.sql");
+
+$sql = preg_replace("jakku_db_name", __DB_NAME__, $sql);
+
+echo "As your password is something personal, we don't want to know about it. \n
+    MySQL will ask it to create database, then we will use the one you must specify in conf.php";
+
+exec(sprintf("mysql -u%s -p -e '%s'", $user, $sql));
