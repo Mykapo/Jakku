@@ -1,0 +1,24 @@
+
+button {
+    background-color: $blue-grey;
+    font-family: $font;
+    font-size: 18px;
+    color: $grey;
+    padding: 10px;
+    border-radius: 50px;
+    transition: 0.2s;
+}
+.add {
+    margin-top: 30px;
+    width: 25%;
+}
+.complete {
+    background-color: $purple;
+    color: $white;
+    transition: 0.2s;
+    cursor: pointer;
+}
+.complete:hover {
+    background-color: $purple--light;
+    transition: 0.1s;
+}
