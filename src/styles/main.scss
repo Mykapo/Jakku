@@ -3,10 +3,16 @@
 @import "base/fonts.scss";
 @import "base/variables.scss";
 @import  "base/reset.scss";
+@import "base/common.scss";
 
 /* LAYOUT */
 
-@import "partials/header";
+@import "partials/header.scss";
 @import "partials/aside.scss";
+@import "partials/table.scss";
+@import "partials/empty.scss";
+
+/* COMPONENTS */
+
 
 
