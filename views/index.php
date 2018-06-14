@@ -13,5 +13,6 @@
     <main>
             <?php require('partials/aside.php'); ?>
     </main>
+    <?php require('partials/popup-devis.php'); ?>
 </body>
 </html>
