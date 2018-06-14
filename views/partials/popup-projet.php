@@ -21,7 +21,7 @@
                     <option value="valeur2">Valeur 2</option>
                 </select>
             </div>
-            <button id="add-finish-projet" type="submit" class="add">Ajouter</button>
+            <button id="add-finish-projet" type="submit" class="button add">Ajouter</button>
         </form>
     </section>
 </div>
