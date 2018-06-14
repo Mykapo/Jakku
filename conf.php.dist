@@ -1,0 +1,8 @@
+<?php
+
+define("__APP_ROOT__", __DIR__);
+define("__DB_NAME__", "Jakku");
+define("__DB_USER__", "root");
+define("__DB_PASS__", "root");
+define("__DB_PORT__", 3306);
+define("__DB_HOST__", "localhost");

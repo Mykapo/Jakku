@@ -1,0 +1,20 @@
+.input-label {
+    font-family: $font;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: $grey--light;
+    margin-bottom: 5px;
+    margin-left: 15px;
+}
+input {
+    border: 1px solid $grey--light;
+    height: 34px;
+    border-radius: 5px;
+    font-size: 16px;
+    padding-left: 20px;
+    color: $grey;
+    font-family: $font;
+}
+input::placeholder {
+    color: $grey--light;
+}
