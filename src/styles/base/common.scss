@@ -1,0 +1,27 @@
+body {
+    background: #fcfcfc;
+}
+
+main {
+    display: flex;
+}
+
+.section-wrapper {
+    width: 77%;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border: 0;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.active {
+    background: $primary--ultraLight;
+    border-left: 4px solid $primary;
+}
