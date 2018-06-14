@@ -34,7 +34,7 @@
             </a>
         </li>
         <li class="main-menu__item">
-            <a>
+            <a href="company.php">
                 <span class="icon icon-icon_company"></span>
                 <div class="infos">
                     <h2>Votre société</h2>

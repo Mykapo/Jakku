@@ -13,7 +13,6 @@ for (let i = 0; i < inputs.length ; i++) {
             buttonDevis.classList.remove('complete');
             buttonDevis.disabled = true;
         }
-       
         
     })
 }
@@ -27,7 +26,21 @@ for (let i = 0; i < inputs.length ; i++) {
             buttonProjet.classList.remove('complete');
             buttonDevis.disabled = true;
         }
-       
         
     })
+
+}
+var links = document.getElementsByTagName("link");
+console.log('links', links)
+
+for (var i = 0; i<links.length ; i++){
+    var title = links[i].getAttribute("title");
+    if ( title == "color"){
+        changeHrefColor(links[i]);
+
+        break;
+    }
+}
+function changeHrefColor(linkColor) {
+    linkColor.setAttribute("href", "test");
 }

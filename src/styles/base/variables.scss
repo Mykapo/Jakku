@@ -6,9 +6,9 @@ $font--bold: 'RobotoBold', Arial, sans-serif;
 
 /* COLORS */
 
-$purple: rgba(153, 37, 255, 1);
-$purple--light: rgba(153, 37, 255, 0.7);
-$purple--ultraLight: rgba(153, 37, 255, 0.1);
+$primary: rgba(153, 37, 255, 1);
+$primary--light: rgba(153, 37, 255, 0.7);
+$primary--ultraLight: rgba(153, 37, 255, 0.1);
 
 $white: #ffffff;
 $grey: #868B9B;
@@ -18,4 +18,5 @@ $blue-grey: #b5b5c9;
 $grey--light: #A7AAB6;
 $grey--ultraLight: #C8CAD2;
 $grey--border: rgba(200, 202, 210, 0.2);
+$grey--borderInput: rgba(200, 202, 210, 0.4);
 $grey--bg: #fcfcfc; 

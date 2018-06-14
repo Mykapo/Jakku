@@ -14,12 +14,12 @@
     width: 25%;
 }
 .complete {
-    background-color: $purple;
+    background-color: $primary;
     color: $white;
     transition: 0.2s;
     cursor: pointer;
 }
 .complete:hover {
-    background-color: $purple--light;
+    background-color: $primary--light;
     transition: 0.1s;
 }
