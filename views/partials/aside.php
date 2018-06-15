@@ -1,13 +1,9 @@
-<?php
-
-?>
-
 <p></p>
 
 <nav class="main-menu" role="navigation">
     <ul>
-        <li class="main-menu__item active">
-            <a href="clients.php">
+        <li class="main-menu__item <?= $page === "clients.php" ? "active" : "" ?>">
+            <a href="/clients">
                 <span class="icon icon-icon_user"></span>
                 <div class="infos">
                     <h2>Clients</h2>
@@ -15,17 +11,17 @@
                 </div>
             </a>
         </li>
-        <li class="main-menu__item">
-            <a href="projects.php">
+        <li class="main-menu__item <?= $page === "projects.php" ? "active" : "" ?>">
+            <a href="/projects">
                 <span class="icon icon-icon_list"></span>
                 <div class="infos">
                     <h2>Projets</h2>
-                    <span>Accédez à la liste de tous vos clients et à leurs coordonées</span>
+                    <span>Accédez à la liste de tous vos projets</span>
                 </div>
             </a>
         </li>
-        <li class="main-menu__item">
-            <a href="invoices.php">
+        <li class="main-menu__item <?= $page === "invoices.php" ? "active" : "" ?>">
+            <a href="/invoices">
                 <span class="icon icon-icon_facture"></span>
                 <div class="infos">
                     <h2>Facturation</h2>
@@ -33,8 +29,8 @@
                 </div>
             </a>
         </li>
-        <li class="main-menu__item">
-            <a href="company.php">
+        <li class="main-menu__item <?= $page === "company.php" ? "active" : "" ?>">
+            <a href="/company">
                 <span class="icon icon-icon_company"></span>
                 <div class="infos">
                     <h2>Votre société</h2>

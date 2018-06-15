@@ -1,0 +1,5 @@
+#!/usr/bin/env php
+<?php
+require_once __DIR__ . "/../vendor/autoload.php";
+
+exec("php -S localhost:8000 -t " . __APP_ROOT__ . "/public");

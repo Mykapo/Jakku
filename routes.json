@@ -1,0 +1,18 @@
+[
+  {
+    "uri" : "/",
+    "method" : ["GET","POST"],
+    "controller" : "Mykapo\\Jakku\\Controller\\JakkuController",
+    "action" : "indexAction"
+  },{
+    "uri" : "/test",
+    "method" : ["GET"],
+    "controller" : "Mykapo\\Jakku\\Controller\\JakkuController",
+    "action" : "redirectAction"
+  },{
+    "uri" : "/:page",
+    "method" : ["GET"],
+    "controller" : "Mykapo\\Jakku\\Controller\\JakkuController",
+    "action" : "testAction"
+  }
+]
