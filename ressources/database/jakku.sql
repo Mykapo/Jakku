@@ -9,7 +9,7 @@ use jakku_database_name;
 CREATE TABLE user (
   `id` SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
   `company_name` VARCHAR(255),
-  `siret` VARCHAR(14),
+  `siret` VARCHAR(17),
   `name` VARCHAR(150),
   `address` TEXT,
   `email` TEXT,
