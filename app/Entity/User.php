@@ -75,67 +75,67 @@ class User extends Entity implements JakkuOrmCompatibleInterface
         $params = [
             [
                 "tag" => ":id",
-                "values" => $this->,
+                "values" => $this->id,
                 "type" => \PDO::PARAM_INT
             ],[
                 "tag" => ":company_name",
-                "values" => $this->,
+                "values" => $this->company_name,
                 "type" => \PDO::PARAM_STR
             ],[
                 "tag" => ":siret",
-                "values" => $this->,
+                "values" => $this->siret,
                 "type" => \PDO::PARAM_STR
             ],[
                 "tag" => ":name",
-                "values" => $this->,
+                "values" => $this->name,
                 "type" => \PDO::PARAM_STR
             ],[
                 "tag" => ":address",
-                "values" => $this->,
+                "values" => $this->address,
                 "type" => \PDO::PARAM_STR
             ],[
                 "tag" => ":email",
-                "values" => $this->,
+                "values" => $this->email,
                 "type" => \PDO::PARAM_STR
             ],[
                 "tag" => ":logo",
-                "values" => $this->,
+                "values" => $this->logo,
                 "type" => \PDO::PARAM_STR
             ],[
                 "tag" => ":theme",
-                "values" => $this->,
+                "values" => $this->theme,
                 "type" => \PDO::PARAM_STR
             ],[
                 "tag" => ":wid",
-                "values" => $this->,
+                "values" => $this->id,
                 "type" => \PDO::PARAM_INT
             ],[
                 "tag" => ":ucompany_name",
-                "values" => $this->,
+                "values" => $this->company_name,
                 "type" => \PDO::PARAM_STR
             ],[
                 "tag" => ":usiret",
-                "values" => $this->,
+                "values" => $this->siret,
                 "type" => \PDO::PARAM_STR
             ],[
                 "tag" => ":uname",
-                "values" => $this->,
+                "values" => $this->name,
                 "type" => \PDO::PARAM_STR
             ],[
                 "tag" => ":uaddress",
-                "values" => $this->,
+                "values" => $this->address,
                 "type" => \PDO::PARAM_STR
             ],[
                 "tag" => ":uemail",
-                "values" => $this->,
+                "values" => $this->email,
                 "type" => \PDO::PARAM_STR
             ],[
                 "tag" => ":ulogo",
-                "values" => $this->,
+                "values" => $this->logo,
                 "type" => \PDO::PARAM_STR
             ],[
                 "tag" => ":utheme",
-                "values" => $this->,
+                "values" => $this->theme,
                 "type" => \PDO::PARAM_STR
             ]
         ];
@@ -151,7 +151,7 @@ class User extends Entity implements JakkuOrmCompatibleInterface
         return self::execute($sql, $params);
     }
 
-    public static function find(?int $id = null) :?self
+    public static function find(?int $id = null) //:?self
     {
         $params = [];
         $whereClause = " ";
@@ -163,7 +163,7 @@ class User extends Entity implements JakkuOrmCompatibleInterface
                 "type" => \PDO::PARAM_INT
             ];
         }
-        $sql = "SELECT * FROM " . self::getTableName() . $whereClause . "LIMIT :l";
+        $sql = "SELECT * FROM " . self::getTableName() . $whereClause . " LIMIT :l";
         $params[] = [
                 "tag" => ":l",
                 "values" => self::DEFAULT_LIMIT,
@@ -183,14 +183,14 @@ class User extends Entity implements JakkuOrmCompatibleInterface
             );
         }
 
-        throw new OrmException("No data found", 404);
+        return null;
     }
 
     public static function findAll(?int $offset = null, ?int $limit = null) :?array
     {
-        $sql = "SELECT * FROM " . self::getTableName() . " LIMIT :l;";
+        $sql = "SELECT * FROM " . self::getTableName() . " LIMIT :lim";
         $params = [[
-            "tag" => ":l",
+            "tag" => ":lim",
             "value" => $limit ?? self::DEFAULT_LIMIT,
             "type" => \PDO::PARAM_INT
         ]];
@@ -222,13 +222,13 @@ class User extends Entity implements JakkuOrmCompatibleInterface
             $params[] = [
                 "tag" => ":".$condition,
                 "value" => $value,
-                "type" => (is_string($vtype) ? PDO::PARAM_STR : (is_int($vtype) ? PDO::PARAM_INT : (is_bool($vtype) ? PDO::PARAM_BOOL : null)));
+                "type" => (is_string($vtype) ? \PDO::PARAM_STR : (is_int($vtype) ? \PDO::PARAM_INT : (is_bool($vtype) ? \PDO::PARAM_BOOL : null)));
             ];
         }
         $conds = substr($conds, 0, -4);
-        $sql = "SELECT * FROM " . self::getTableName() . "LIMIT :l;";
+        $sql = "SELECT * FROM " . self::getTableName() . $conds . " LIMIT :lim;";
         $params = [[
-            "tag" => ":l",
+            "tag" => ":lim",
             "value" => $limit ?? self::DEFAULT_LIMIT,
             "type" => \PDO::PARAM_INT
         ]];

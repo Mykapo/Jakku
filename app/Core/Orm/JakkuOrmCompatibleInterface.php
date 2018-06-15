@@ -39,7 +39,8 @@ interface JakkuOrmCompatibleInterface
      * @param int|null $id
      * @return JakkuOrmCompatibleInterface|null
      */
-    public static function find(?int $id = null) :?self;
+    public static function find(?int $id = null) //:?Entity
+    ;
 
     /**
      * Get all results

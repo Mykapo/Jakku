@@ -74,3 +74,7 @@ Just as in the subject, use the imperative, present tense: "change" not "changed
 The footer should contain any information about Breaking Changes and is also the place to reference GitHub issues that this commit Closes.
 
 Breaking Changes should start with the word BREAKING CHANGE: with a space or two newlines. The rest of the commit message is then used for this.
+
+## Important
+
+You may have found the greatest feature ever made, coded it in the best way possible, but Mykapo and any of the owner of the organization are the only ones able to validate anything 
