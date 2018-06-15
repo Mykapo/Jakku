@@ -23,3 +23,19 @@
     background-color: $primary--light;
     transition: 0.1s;
 }
+.button-plus{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+    button {
+        width: 43px;
+        border-radius: 100%;
+    }
+    p {
+        margin-left: 20px;
+        font-family: $font;
+        color: $primary;
+        font-size: 16px;
+    }
+}

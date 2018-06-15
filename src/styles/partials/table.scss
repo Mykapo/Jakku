@@ -34,9 +34,24 @@ table {
     }
 
     .main-row {
-        background: #ffff;
+        background: #fff;
+        
         &.active {
             background: $primary--ultraLight;
+
+            .table-icon .icon-icon_arrow {
+                display: inline-block;
+                transform: rotate(90deg);
+            }
+        }
+    }
+
+    .subtable-row,
+    .subtable-header {
+        display: none;
+
+        &.opened {
+            display: table-row;
         }
     }
 
@@ -67,6 +82,22 @@ table {
     }
 }
 
+th:nth-child(1) {
+    width: 7%;
+}
+th:nth-child(2) {
+    width: 25%;
+}
+th:nth-child(3) {
+    width: 17%;
+}
+th:nth-child(4) {
+    width: 16%;
+}
+th:nth-child(5) {
+    width: 11%;
+}
+
 .projects-table,
 .invoices-table {
     line-height: 1.5;
@@ -90,19 +121,4 @@ table {
     }
 }
 
-th:nth-child(1) {
-    width: 7%;
-}
-th:nth-child(2) {
-    width: 25%;
-}
-th:nth-child(3) {
-    width: 17%;
-}
-th:nth-child(4) {
-    width: 16%;
-}
-th:nth-child(5) {
-    width: 11%;
-}
 
