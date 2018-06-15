@@ -1,8 +1,9 @@
+/* Pop up management */
+
 var inputs = document.querySelectorAll('.input-form');
 var buttonProjet = document.getElementById('add-finish-projet');
 var buttonDevis = document.getElementById('add-finish-devis')
 var checkState = false;
-console.log(inputs);
 
 for (let i = 0; i < inputs.length ; i++) {
     inputs[i].addEventListener('change', function() {
@@ -30,8 +31,10 @@ for (let i = 0; i < inputs.length ; i++) {
     })
 
 }
+
+/* Change color theme */
+
 var links = document.getElementsByTagName("link");
-console.log('links', links)
 
 for (var i = 0; i<links.length ; i++){
     var title = links[i].getAttribute("title");
@@ -41,6 +44,37 @@ for (var i = 0; i<links.length ; i++){
         break;
     }
 }
+
 function changeHrefColor(linkColor) {
     linkColor.setAttribute("href", "test");
 }
+
+/* Table content */
+
+let mainRows = document.querySelectorAll('.main-row');
+let expandButtons = document.querySelectorAll('.expand-row-button');
+
+for (let i = 0; i < expandButtons.length; i++){
+    expandButtons[i].addEventListener('click', function(){
+        let mainRow = this.parentNode.parentNode;
+        let subtableRows = getSubtable(mainRow, 'main-row');
+        
+        mainRow.classList.toggle('active');
+        subtableRows.forEach(function(row){
+            row.classList.toggle('opened');
+        })
+    })
+}
+
+function getSubtable(el, selector) {
+    var siblings = [];
+    el = el.nextElementSibling;
+
+	while (el) {
+        if (el.classList.contains(selector)) break;
+		siblings.push(el);
+		el = el.nextElementSibling;
+	}
+
+	return siblings;
+};
