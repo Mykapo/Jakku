@@ -10,6 +10,11 @@ namespace Mykapo\Jakku\Core\Helper;
 
 use \PDO;
 
+/**
+ * Class Database
+ * @package Mykapo\Jakku\Core\Helper
+ * @TODO : setup environment (and database) from class instead of big sql file called in CLI
+ */
 class Database
 {
 }

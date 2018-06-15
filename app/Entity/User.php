@@ -41,7 +41,7 @@ class User extends Entity implements JakkuOrmCompatibleInterface
         ?string $address = null,
         ?string $email = null,
         ?string $logo = null,
-        ?int $theme = null,
+        ?int $theme = null
     )
     {
         $this->id = $id;
@@ -170,7 +170,7 @@ class User extends Entity implements JakkuOrmCompatibleInterface
                 "type" => \PDO::PARAM_STR
             ];
 
-        if ($result = Connect::getInstance()->getResult($sql, $params)) {
+        if ($result = Connect::getInstance()->getResult($sql, $params, false)) {
             return new self(
                 $result["id"],
                 $result["company_name"],
@@ -187,11 +187,71 @@ class User extends Entity implements JakkuOrmCompatibleInterface
     }
 
     public static function findAll(?int $offset = null, ?int $limit = null) :?array
-    {}
+    {
+        $sql = "SELECT * FROM " . self::getTableName() . " LIMIT :l;";
+        $params = [[
+            "tag" => ":l",
+            "value" => $limit ?? self::DEFAULT_LIMIT,
+            "type" => \PDO::PARAM_INT
+        ]];
+        $results = Connect::getInstance()->getResult($sql, $params, true);
+        $selfCollection = [];
+        foreach ($results as $user) {
+            $selfCollection[] = new self(
+                $user["id"],
+                $user["company_name"],
+                $user["siret"],
+                $user["name"],
+                $user["address"],
+                $user["email"],
+                $user["logo"],
+                $user["theme"]
+            );
+        }
+
+        return $selfCollection;
+    }
 
     public static function findBy(array $conditions, ?int $offset = null, ?int $limit = null) :?array
-    {}
+    {
+        $conds = " ";
+        $params = [];
+        foreach ($conditions as $condition => $value) {
+            $conds .= "WHERE " . $condition . "=:" . $condition . " AND ";
+            $vtype = gettype($value);
+            $params[] = [
+                "tag" => ":".$condition,
+                "value" => $value,
+                "type" => (is_string($vtype) ? PDO::PARAM_STR : (is_int($vtype) ? PDO::PARAM_INT : (is_bool($vtype) ? PDO::PARAM_BOOL : null)));
+            ];
+        }
+        $conds = substr($conds, 0, -4);
+        $sql = "SELECT * FROM " . self::getTableName() . "LIMIT :l;";
+        $params = [[
+            "tag" => ":l",
+            "value" => $limit ?? self::DEFAULT_LIMIT,
+            "type" => \PDO::PARAM_INT
+        ]];
+        $results = Connect::getInstance()->getResult($sql, $params, true);
+        $selfCollection = [];
+        foreach ($results as $user) {
+            $selfCollection[] = new self(
+                $user["id"],
+                $user["company_name"],
+                $user["siret"],
+                $user["name"],
+                $user["address"],
+                $user["email"],
+                $user["logo"],
+                $user["theme"]
+            );
+        }
+
+        return $selfCollection;
+    }
 
     public static function getTableName() :string
-    {}
+    {
+        return "user";
+    }
 }
