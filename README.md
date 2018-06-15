@@ -28,8 +28,15 @@ Once it is done, clone this repository and go at the root of the project by exec
 ```bash
 git clone https://github.com/Mykapo/Jakku.git && cd Jakku
 ``` 
+Prepare the configuration file PHP is going to use to make the different programs run by doing
 
-Install all dependencies
+```bash
+cp conf.php.dist conf.php
+```
+
+You can define everything around database (starting with "__DB"). Note that the program will create a database user and password, so feel free to put any user name and password !
+
+Then, install all dependencies
 
 ```bash
 npm install
