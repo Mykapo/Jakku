@@ -8,8 +8,9 @@
 
 namespace Mykapo\Jakku\Controller;
 
+use Mykapo\Jakku\Core\Controller;
 
-class JakkuController
+class JakkuController extends Controller
 {
     public function indexAction(?array $params)
     {
@@ -18,7 +19,12 @@ class JakkuController
 
     public function testAction($params)
     {
-        return "<h1>" . implode(" : ", $params) . "</h1>";
+        if (!file_exists(__APP_ROOT__ . "/views/" . $params["page"] . ".php"))
+        {
+            return $this->notFound();
+        }
+
+        return $this->render($params["page"] . ".php");
     }
 
     public function redirectAction()

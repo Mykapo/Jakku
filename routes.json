@@ -10,7 +10,7 @@
     "controller" : "Mykapo\\Jakku\\Controller\\JakkuController",
     "action" : "redirectAction"
   },{
-    "uri" : "/:yolo",
+    "uri" : "/:page",
     "method" : ["GET"],
     "controller" : "Mykapo\\Jakku\\Controller\\JakkuController",
     "action" : "testAction"
